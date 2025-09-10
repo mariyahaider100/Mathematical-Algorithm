@@ -1,7 +1,13 @@
 # perations-on-Signals-and-Sequences
 Discrete-time signal plots in MATLAB, including impulse, step, ramp, exponential, signum, and sinc functions.
 
-#code 
+# Operations on Signals and Sequences
+
+Discrete-time signal plots in MATLAB, including impulse, step, ramp, exponential, signum, and sinc functions.
+
+## MATLAB Code
+
+```matlab
 % Define the range of n values
 n = -10:10;
 
@@ -42,7 +48,7 @@ ylabel('Amplitude');
 grid on;
 
 % Signum Function
-signum_function = sign(n); % Signum function: -1 for n<0, 0 for n=0, 1 for n>0
+signum_function = sign(n); % -1 for n<0, 0 for n=0, 1 for n>0
 figure;
 stem(n, signum_function, 'filled');
 title('Signum Function');
@@ -51,13 +57,14 @@ ylabel('Amplitude');
 grid on;
 
 % Sinc Function
-sinc_function = sinc(n); % Sinc function: sinc(x) = sin(pi*x)/(pi*x)
+sinc_function = sinc(n); % sinc(x) = sin(pi*x)/(pi*x)
 figure;
 stem(n, sinc_function, 'filled');
 title('Sinc Function');
 xlabel('n');
 ylabel('Amplitude');
 grid on;
+
 % Plot all signals in a single figure for comparison
 figure;
 hold on;
@@ -73,9 +80,3 @@ xlabel('n');
 ylabel('Amplitude');
 legend show;
 grid on;
-
-
-
-
-
-
