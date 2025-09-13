@@ -17,7 +17,7 @@ title('Unit Impulse Signal');
 xlabel('n');
 ylabel('Amplitude');
 grid on;
-![image alt]<[01.png]
+![image alt]<[[01.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/91c6612da71655e9405c2544e11ed3590ac81951/01.png)
 
 % Unit Step Signal
 unit_step = (n >= 0); % Step is 1 for n >= 0, 0 elsewhere
