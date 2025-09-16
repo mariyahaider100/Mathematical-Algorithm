@@ -18,8 +18,9 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[[01.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/91c6612da71655e9405c2544e11ed3590ac81951/01.png)
+![image alt]<[01.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/91c6612da71655e9405c2544e11ed3590ac81951/01.png)
 
+```
 % Unit Step Signal
 unit_step = (n >= 0); % Step is 1 for n >= 0, 0 elsewhere
 figure;
@@ -29,8 +30,9 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[[02.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/02.png)
+![image alt]<[02.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/02.png)
 
+```
 % Unit Ramp Signal
 unit_ramp = n .* (n >= 0); % Ramp is n for n >= 0, 0 elsewhere
 figure;
@@ -40,8 +42,9 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[[03.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/03.png)
+![image alt]<[03.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/03.png)
 
+```
 % Exponential Signal
 exponential_signal = exp(0.1 * n); % Exponential function e^(0.1*n)
 figure;
@@ -51,8 +54,9 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[[04.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/04.png) 
+![image alt]<[04.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/04.png) 
 
+```
 % Signum Function
 signum_function = sign(n); % -1 for n<0, 0 for n=0, 1 for n>0
 figure;
@@ -62,7 +66,8 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[[05.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/05.png)
+![image alt]<[05.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/05.png)
+```
 % Sinc Function
 sinc_function = sinc(n); % sinc(x) = sin(pi*x)/(pi*x)
 figure;
@@ -72,7 +77,8 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[[06.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/06.png) 
+![image alt]<[06.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/06.png) 
+```
 % Plot all signals in a single figure for comparison
 figure;
 hold on;
@@ -84,6 +90,7 @@ stem(n, signum_function, 'filled', 'DisplayName', 'Signum');
 stem(n, sinc_function, 'filled', 'DisplayName', 'Sinc');
 hold off;
 title('Comparison of Signals');
+```
 xlabel('n');
 ylabel('Amplitude');
 legend show;
