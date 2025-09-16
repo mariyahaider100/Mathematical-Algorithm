@@ -18,7 +18,7 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[01.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/91c6612da71655e9405c2544e11ed3590ac81951/01.png)
+![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/01.png)
 
 ```
 % Unit Step Signal
@@ -30,7 +30,7 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[02.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/02.png)
+![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/02.png)
 
 ```
 % Unit Ramp Signal
@@ -42,7 +42,8 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[03.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/03.png)
+![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/03.png)
+
 
 ```
 % Exponential Signal
@@ -54,7 +55,8 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[04.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/04.png) 
+![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/04.png)
+
 
 ```
 % Signum Function
@@ -66,7 +68,8 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[05.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/05.png)
+![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/05.png)
+
 ```
 % Sinc Function
 sinc_function = sinc(n); % sinc(x) = sin(pi*x)/(pi*x)
@@ -77,7 +80,8 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 ```
-![image alt]<[06.png](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/e01e80f1d0c36ff5ed1f8ad1943cea059e16ad00/06.png) 
+![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/06.png)
+
 ```
 % Plot all signals in a single figure for comparison
 figure;
