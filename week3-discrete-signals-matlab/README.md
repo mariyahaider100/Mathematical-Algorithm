@@ -54,7 +54,3 @@ Clone the git repository
 git clone https://github.com/SAJIB3489/mathematical-algorithms.git
 cd week3-discrete-signals-matlab
 ```
-
-## Technical Blog
-
-Checkout my blog post to know about [Exploring Discrete-Time Signals with MATLAB](https://dev.to/sajibpra/exploring-discrete-time-signals-with-matlab-6j)
