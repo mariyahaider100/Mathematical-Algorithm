@@ -46,8 +46,7 @@ grid on;
 title('Frequency domain representation of Sin(2\pi50t)');
 xlabel('Frequency (Hz)');
 ylabel('|X(f)|');
-
-
+```
 
 
 #Plot
