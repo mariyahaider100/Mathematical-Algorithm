@@ -51,6 +51,7 @@ xlabel('Frequency (Hz)');
 ylabel('Phase (degrees)');
 ax = gca;
 ax.XTick = [15 40 60 85];
+%%
 
 #Plot
 ![plot 4](/exercise-9/Screenshot%202025-09-30%20at%2014.35.08.png) 
