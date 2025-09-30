@@ -94,7 +94,6 @@ stem(n, signum_function, 'filled', 'DisplayName', 'Signum');
 stem(n, sinc_function, 'filled', 'DisplayName', 'Sinc');
 hold off;
 title('Comparison of Signals');
-```
 xlabel('n');
 ylabel('Amplitude');
 legend show;
