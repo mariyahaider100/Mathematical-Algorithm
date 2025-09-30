@@ -1,102 +1,15 @@
+![Savonia](/images/savonia_logo_en_3.webp) 
+This repository is both a learning space and a reference hub for the course Mathematical Algorithms.
 
-# Operations on Signals and Sequences
+Its purpose is to support students and enthusiasts in exploring, implementing, and experimenting with key algorithms that form the foundation of mathematics and computer science. Inside, you’ll find well-documented code examples, clear explanations, and problem-solving approaches that align with the topics taught in the Mathematical Algorithms course.
 
-Discrete-time signal plots in MATLAB, including impulse, step, ramp, exponential, signum, and sinc functions.
+**Course Lecturer:** Osman Torunoglu
 
-## MATLAB Code
+Each weekly exercise provides:
 
-```matlab
-% Define the range of n values
-n = -10:10;
+1.MATLAB codes
 
-% Unit Impulse Signal
-unit_impulse = (n == 0); % Impulse is 1 at n=0, 0 elsewhere
-figure;
-stem(n, unit_impulse, 'filled');
-title('Unit Impulse Signal');
-xlabel('n');
-ylabel('Amplitude');
-grid on;
-```
-![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/01.png)
+2.Accompanying README.md documentation
 
-```
-% Unit Step Signal
-unit_step = (n >= 0); % Step is 1 for n >= 0, 0 elsewhere
-figure;
-stem(n, unit_step, 'filled');
-title('Unit Step Signal');
-xlabel('n');
-ylabel('Amplitude');
-grid on;
-```
-![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/02.png)
+3.Plots and visualizations
 
-```
-% Unit Ramp Signal
-unit_ramp = n .* (n >= 0); % Ramp is n for n >= 0, 0 elsewhere
-figure;
-stem(n, unit_ramp, 'filled');
-title('Unit Ramp Signal');
-xlabel('n');
-ylabel('Amplitude');
-grid on;
-```
-![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/03.png)
-
-
-```
-% Exponential Signal
-exponential_signal = exp(0.1 * n); % Exponential function e^(0.1*n)
-figure;
-stem(n, exponential_signal, 'filled');
-title('Exponential Signal');
-xlabel('n');
-ylabel('Amplitude');
-grid on;
-```
-![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/04.png)
-
-
-```
-% Signum Function
-signum_function = sign(n); % -1 for n<0, 0 for n=0, 1 for n>0
-figure;
-stem(n, signum_function, 'filled');
-title('Signum Function');
-xlabel('n');
-ylabel('Amplitude');
-grid on;
-```
-![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/05.png)
-
-```
-% Sinc Function
-sinc_function = sinc(n); % sinc(x) = sin(pi*x)/(pi*x)
-figure;
-stem(n, sinc_function, 'filled');
-title('Sinc Function');
-xlabel('n');
-ylabel('Amplitude');
-grid on;
-```
-![image](https://github.com/mariyahaider100/perations-on-Signals-and-Sequences/blob/main/images/06.png)
-
-```
-% Plot all signals in a single figure for comparison
-figure;
-hold on;
-stem(n, unit_impulse, 'filled', 'DisplayName', 'Unit Impulse');
-stem(n, unit_step, 'filled', 'DisplayName', 'Unit Step');
-stem(n, unit_ramp, 'filled', 'DisplayName', 'Unit Ramp');
-stem(n, exponential_signal, 'filled', 'DisplayName', 'Exponential');
-stem(n, signum_function, 'filled', 'DisplayName', 'Signum');
-stem(n, sinc_function, 'filled', 'DisplayName', 'Sinc');
-hold off;
-title('Comparison of Signals');
-```
-xlabel('n');
-ylabel('Amplitude');
-legend show;
-grid on;
-```
