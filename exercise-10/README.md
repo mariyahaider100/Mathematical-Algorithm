@@ -21,3 +21,6 @@ This project demonstrates how to compute and analyze the **frequency response** 
 3. Convert transfer function to zero–pole form using:
    ```matlab
    [z, p, k] = tf2zpk(b, a);
+   ```
+#Plot
+![Magnitude and Pole–Zero Plots](/exercise-10/Screenshot%202025-09-30%20at%2015.16.49.png)  
