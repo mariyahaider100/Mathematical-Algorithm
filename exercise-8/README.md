@@ -75,6 +75,7 @@ ylabel('Phase (degrees)');
 xlim([0 100]);
 ylim([-180 180]);
 grid on;
+```
 
 #plot
 ![plot 3](/exercise-8/Screenshot%202025-09-30%20at%2014.32.02.png) 
