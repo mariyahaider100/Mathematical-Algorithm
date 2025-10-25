@@ -68,11 +68,3 @@ This occurs when the sampling rate falls below twice the highest frequency, as e
 
 
 
-## Run the code
-
-Clone the git repository
-
-```bash
-git clone https://github.com/SAJIB3489/mathematical-algorithms.git
-cd lecture_7_lab_1
-```
