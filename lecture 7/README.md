@@ -1,14 +1,19 @@
 # Results
 
-| <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_1.png"/><br/>Figure 1</p> |
-| ---------------------------------------------------------------------------------- |
+## Results
 
+<p align="center">
+  <img src="lecture_7/Lab_1_Figure_1.png" width="250">
+  <img src="lecture_7/Lab_1_Figure_2.png" width="250">
+  <img src="lecture_7/Lab_1_Figure_3.png" width="250">
+  <img src="lecture_7/Lab_1_Figure_4.png" width="250">
+</p>
 
-| <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_2.png"/><br/>Figure 2</p> | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_3.png"/><br/>Figure 3</p> | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_4.png"/><br/>Figure 4</p> |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-
-| <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_5.png"/><br/>Figure 5</p> | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_6.png"/><br/>Figure 6</p> | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_7.png"/><br/>Figure 7</p> |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+<p align="center">
+  <img src="lecture_7/Lab_1_Figure_5.png" width="250">
+  <img src="lecture_7/Lab_1_Figure_6.png" width="250">
+  <img src="lecture_7/Lab_1_Figure_7.png" width="250">
+</p>
 
 
 
