@@ -1,19 +1,11 @@
 # Results
-
-## Results
-
 <p align="center">
-  <img src="lecture_7/Lab_1_Figure_1.png" width="250">
-  <img src="lecture_7/Lab_1_Figure_2.png" width="250">
-  <img src="lecture_7/Lab_1_Figure_3.png" width="250">
-  <img src="lecture_7/Lab_1_Figure_4.png" width="250">
+  <img src="lecture_7/Lab_1_Figure_1.png" width="200"><br>Figure 1
+</p>
+<p align="center">
+  <img src="lecture_7/Lab_1_Figure_2.png" width="200"><br>Figure 2
 </p>
 
-<p align="center">
-  <img src="lecture_7/Lab_1_Figure_5.png" width="250">
-  <img src="lecture_7/Lab_1_Figure_6.png" width="250">
-  <img src="lecture_7/Lab_1_Figure_7.png" width="250">
-</p>
 
 
 
