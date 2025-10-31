@@ -17,7 +17,7 @@ imshow(S,[]);
 ```
 
 **Screenshot:**  
-![Log-magnitude spectrum](figures/log_magnitude_spectrum.png)
+![Log-magnitude spectrum](figures/log_magnitude_spectrum.png) 
 
 **Explanation:**  
 `fftshift` moves the low-frequency components to the center of the spectrum. Bright regions represent dominant frequency components.
