@@ -1,104 +1,127 @@
-%% IMAGE DENOISING EXPERIMENT
-** Author:** Mariya Haider 
-**Course:** Mathematical Algorithms (DSP)
-%
-% This script demonstrates denoising of a grayscale image corrupted by
-% Gaussian noise, and compares Mean, Median, Gaussian Blur, and DnCNN.
+**Author:** Mariya Haider 
 
-%% 1. Load Image and Add Gaussian Noise
-originalImage = im2double(imread('original.png'));
-if size(originalImage,3)==3
-    originalImage = rgb2gray(originalImage);
-end
-
-sigma = 0.04;
-noisyImage = imnoise(originalImage, 'gaussian', 0, sigma^2);
-
-%% 2. Apply Denoising Filters
-
-% Mean Filter
-meanKernel = fspecial('average', [3 3]);
-meanImage = imfilter(noisyImage, meanKernel, 'replicate');
-
-% Median Filter
-medianImage = medfilt2(noisyImage, [3 3]);
-
-% Gaussian Blur
-gaussImage = imgaussfilt(noisyImage, 1);
-
-% Load DnCNN (if available)
-dncnnImage = [];
-if exist('dncnn.mat', 'file')
-    load dncnn.mat   % variable inside should be 'net'
-    dncnnImage = predict(net, noisyImage);
-else
-    warning('DnCNN model not found. Skipping AI output.');
-end
+**Course:** Mathematical Algorithms (DSP) 
 
 
-%% --------------------------------------------------------------
-%% 4. IMAGE QUALITY METRICS (MSE, PSNR, SSIM)
-%% --------------------------------------------------------------
-
-methods = {'Noisy','Mean','Median','Gaussian','DnCNN'};
-images = {noisyImage, meanImage, medianImage, gaussImage, dncnnImage};
-
-fprintf('\n=== IMAGE QUALITY METRICS ===\n');
-for i = 1:length(methods)
-    if isempty(images{i}), continue; end
-    
-    mseVal = immse(images{i}, originalImage);
-    psnrVal = psnr(images{i}, originalImage);
-    ssimVal = ssim(images{i}, originalImage);
-
-    fprintf('\nMethod: %s\n', methods{i});
-    fprintf('MSE   = %.4f\n', mseVal);
-    fprintf('PSNR  = %.4f dB\n', psnrVal);
-    fprintf('SSIM  = %.4f\n', ssimVal);
-end
 
 
-%% --------------------------------------------------------------
-%% 5. VISUAL OBSERVATION RESULTS (DISPLAY COMPARISON)
-%% --------------------------------------------------------------
+# Results
 
-figure('Name','Denoising Comparison');
-subplot(1,6,1); imshow(originalImage); title('Original');
-subplot(1,6,2); imshow(noisyImage); title('Noisy');
-subplot(1,6,3); imshow(meanImage); title('Mean');
-subplot(1,6,4); imshow(medianImage); title('Median');
-subplot(1,6,5); imshow(gaussImage); title('Gaussian');
-
-if ~isempty(dncnnImage)
-    subplot(1,6,6); imshow(dncnnImage); title('DnCNN');
-else
-    subplot(1,6,6); imshow(noisyImage); title('DnCNN Missing');
-end
-
-sgtitle('Figure: Original vs Filter Methods');
+| <p align="center"><img src="/lecture_9_lab_7/figure_7.png"/><br/>Figure 1</p> |
+| ---------------------------------------------------------------------------------- |
 
 
-%% --------------------------------------------------------------
-%% 6. CONCLUSION (IN COMMENTS FOR README)
-%% --------------------------------------------------------------
+## 1. Objective
 
-% Mean Filter:
-%   - Removes some noise
-%   - Causes strong blurring
-%
-% Median Filter:
-%   - Preserves edges better
-%   - Not ideal for Gaussian noise
-%
-% Gaussian Blur:
-%   - Smooths effectively
-%   - Still softens important details
-%
-% DnCNN (AI model):
-%   - Best noise removal
-%   - Preserves texture and edges
-%   - Highest PSNR and SSIM
-%
-% FINAL RESULT:
-%   DnCNN > Gaussian > Median > Mean
+This study explores how various image denoising techniques perform when a clean image is corrupted by **Gaussian noise**. The objectives include:
 
+* Introducing Gaussian noise to a grayscale image.
+
+* Evaluating image quality through MSE, PSNR, and SSIM metrics.
+
+* Comparing the performance of classic filters (Mean, Median, Gaussian Blur) against a pre-trained AI-based DnCNN model.
+
+Presenting both numerical results and visual comparisons of the processed images.
+---
+
+## 2. Noise Modeling
+
+Gaussian noise was added to the original grayscale image:
+
+[
+I_{noisy} = I_{original} + N(0, \sigma^2)
+]
+
+In this experiment:
+
+* Noise standard deviation: **σ = 0.04**
+* MATLAB function used: `imnoise(originalImage, 'gaussian', 0, σ²)`
+
+---
+
+## 3. Filters Compared
+
+| Filter            | Type       | Description                                                                    |
+| ----------------- | ---------- | ------------------------------------------------------------------------------ |
+| **Mean Filter**   | Linear     | Averages neighborhood pixels, smooths noise but blurs edges.                   |
+| **Median Filter** | Non-linear | Preserves edges better, commonly used for salt-and-pepper noise.               |
+| **Gaussian Blur** | Linear     | Weighted smoothing, reduces noise softly but still causes blurring.            |
+| **DnCNN**         | AI / CNN   | Deep learning model trained to remove Gaussian noise while preserving texture. |
+
+---
+
+## 4. Image Quality Metrics
+
+The following metrics were computed:
+
+* **MSE (Mean Square Error)** – lower is better
+* **PSNR (Peak Signal-to-Noise Ratio)** – higher is better
+* **SSIM (Structural Similarity Index)** – higher is better (closer to original image structure)
+
+```matlab
+mseVal = immse(filteredImage, originalImage);
+psnrVal = psnr(filteredImage, originalImage);
+ssimVal = ssim(filteredImage, originalImage);
+```
+
+---
+
+## 5. Visual Observation Results
+
+### **Original vs. Noisy**
+
+* The noisy image appears grainy.
+* Noise distorts fine details and contrast.
+
+### **Mean Filter**
+
+* Noise is reduced somewhat.
+* **Significant blurring** occurs.
+* Edges become less sharp.
+
+### **Median Filter**
+
+* Preserves edges better than Mean filter.
+* Works best for **impulsive noise**, but **less effective for Gaussian noise**.
+* Slight improvement but detail still lost.
+
+### **Gaussian Blur**
+
+* Produces a smooth and visually pleasing result.
+* However, edges still lose sharpness.
+* Some fine textures are washed out.
+
+### **AI-Based DnCNN (Best Result)**
+
+* **Noise is removed effectively** while **preserving small details and edges**.
+* Produces the **highest PSNR and SSIM** values.
+* Looks **closest to the original image** compared to traditional methods.
+
+---
+
+## 6. Conclusion
+
+| Method         | Noise Removal         | Edge Preservation | Overall Effectiveness |
+| -------------- | --------------------- | ----------------- | --------------------- |
+| Mean Filter    | Moderate              | Poor              | Low                   |
+| Median Filter  | Moderate for Gaussian | Good              | Medium                |
+| Gaussian Blur  | Moderate              | Medium            | Medium                |
+| **AI (DnCNN)** | **Excellent**         | **Excellent**     | **High (Best)**       |
+
+
+
+## Run the code
+
+Clone the git repository
+
+```bash
+git clone https://github.com/SAJIB3489/mathematical-algorithms.git
+cd lecture_9_lab_7
+```
+
+### **How to Run**
+
+1. Place the MATLAB script and sample image (`cameraman.tif` or your own dataset) in the same folder.
+2. Open MATLAB and run the script:
+
+---
