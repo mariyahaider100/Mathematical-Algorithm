@@ -70,20 +70,21 @@ ssimVal = ssim(filteredImage, originalImage);
 
 ### **Original vs. Noisy**
 
-* The noisy image appears grainy.
-* Noise distorts fine details and contrast.
+* The noisy image looks speckled, and the fine details and contrast are noticeably degraded.
 
 ### **Mean Filter**
 
-* Noise is reduced somewhat.
-* **Significant blurring** occurs.
-* Edges become less sharp.
+* Noise is partially diminished.
+
+* Noticeable blurring is introduced.
+
+* Edges lose their sharpness.
 
 ### **Median Filter**
 
-* Preserves edges better than Mean filter.
-* Works best for **impulsive noise**, but **less effective for Gaussian noise**.
-* Slight improvement but detail still lost.
+* Retains edges more effectively than the Mean filter.
+* Performs well for impulse noise, but less efficient against Gaussian noise.
+* Offers modest improvement, though some details are still lost.
 
 ### **Gaussian Blur**
 
