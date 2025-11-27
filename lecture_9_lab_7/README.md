@@ -110,18 +110,4 @@ ssimVal = ssim(filteredImage, originalImage);
 
 
 
-## Run the code
-
-Clone the git repository
-
-```bash
-git clone https://github.com/SAJIB3489/mathematical-algorithms.git
-cd lecture_9_lab_7
-```
-
-### **How to Run**
-
-1. Place the MATLAB script and sample image (`cameraman.tif` or your own dataset) in the same folder.
-2. Open MATLAB and run the script:
-
 ---
